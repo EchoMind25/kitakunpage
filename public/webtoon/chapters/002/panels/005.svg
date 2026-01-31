@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1400" width="800" height="1400">
+  <defs>
+    <radialGradient id="burstCenter" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="8%" stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="15%" stop-color="#14b8a6" stop-opacity="0.6"/>
+      <stop offset="35%" stop-color="#0d9488" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#a52020" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="innerCore" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="burstGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="heavyBlur">
+      <feGaussianBlur stdDeviation="50"/>
+    </filter>
+    <filter id="medBlur5">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+    <filter id="lightBlur">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1400" fill="#0a0a0a"/>
+
+  <!-- Deep background energy swirls -->
+  <g opacity="0.15">
+    <ellipse cx="200" cy="400" rx="300" ry="200" fill="#7f1d1d" filter="url(#heavyBlur)"/>
+    <ellipse cx="600" cy="800" rx="300" ry="250" fill="#0d9488" filter="url(#heavyBlur)"/>
+    <ellipse cx="400" cy="600" rx="200" ry="200" fill="#a52020" filter="url(#heavyBlur)"/>
+  </g>
+
+  <!-- Explosion center point -->
+  <circle cx="400" cy="620" r="400" fill="url(#burstCenter)"/>
+  <circle cx="400" cy="620" r="120" fill="url(#innerCore)" opacity="0.5" filter="url(#medBlur5)"/>
+  <circle cx="400" cy="620" r="40" fill="#ffffff" opacity="0.6" filter="url(#medBlur5)"/>
+
+  <!-- Major burst spikes - teal -->
+  <g fill="#14b8a6" opacity="0.7" filter="url(#burstGlow)">
+    <polygon points="400,620 390,420 400,100 410,420"/>
+    <polygon points="400,620 410,820 400,1140 390,820"/>
+    <polygon points="400,620 200,610 60,620 200,630"/>
+    <polygon points="400,620 600,610 740,620 600,630"/>
+
+    <!-- Diagonal spikes -->
+    <polygon points="400,620 320,530 150,300 340,520"/>
+    <polygon points="400,620 480,530 650,300 460,520"/>
+    <polygon points="400,620 320,710 150,940 340,720"/>
+    <polygon points="400,620 480,710 650,940 460,720"/>
+  </g>
+
+  <!-- Secondary burst spikes - maroon -->
+  <g fill="#a52020" opacity="0.5" filter="url(#lightBlur)">
+    <polygon points="400,620 395,480 388,200 405,480"/>
+    <polygon points="400,620 405,760 412,1040 395,760"/>
+    <polygon points="400,620 260,615 100,608 260,625"/>
+    <polygon points="400,620 540,615 700,608 540,625"/>
+
+    <!-- More diagonal spikes at different angles -->
+    <polygon points="400,620 340,570 200,420 350,565"/>
+    <polygon points="400,620 460,570 600,420 450,565"/>
+    <polygon points="400,620 340,670 200,820 350,675"/>
+    <polygon points="400,620 460,670 600,820 450,675"/>
+
+    <!-- Extra angles -->
+    <polygon points="400,620 350,590 170,490 355,595"/>
+    <polygon points="400,620 450,590 630,490 445,595"/>
+    <polygon points="400,620 350,650 170,750 355,645"/>
+    <polygon points="400,620 450,650 630,750 445,645"/>
+  </g>
+
+  <!-- Tertiary fine spikes - white -->
+  <g stroke="#ffffff" stroke-width="1.5" opacity="0.4">
+    <line x1="400" y1="620" x2="100" y2="200"/>
+    <line x1="400" y1="620" x2="700" y2="200"/>
+    <line x1="400" y1="620" x2="100" y2="1040"/>
+    <line x1="400" y1="620" x2="700" y2="1040"/>
+    <line x1="400" y1="620" x2="50" y2="500"/>
+    <line x1="400" y1="620" x2="750" y2="500"/>
+    <line x1="400" y1="620" x2="50" y2="740"/>
+    <line x1="400" y1="620" x2="750" y2="740"/>
+    <line x1="400" y1="620" x2="250" y2="80"/>
+    <line x1="400" y1="620" x2="550" y2="80"/>
+    <line x1="400" y1="620" x2="250" y2="1160"/>
+    <line x1="400" y1="620" x2="550" y2="1160"/>
+  </g>
+
+  <!-- Concentric shock rings -->
+  <g fill="none" stroke-width="2">
+    <circle cx="400" cy="620" r="80" stroke="#ffffff" opacity="0.5"/>
+    <circle cx="400" cy="620" r="140" stroke="#14b8a6" opacity="0.4"/>
+    <circle cx="400" cy="620" r="200" stroke="#14b8a6" opacity="0.3"/>
+    <circle cx="400" cy="620" r="280" stroke="#a52020" opacity="0.25"/>
+    <circle cx="400" cy="620" r="370" stroke="#a52020" opacity="0.15"/>
+    <circle cx="400" cy="620" r="480" stroke="#14b8a6" opacity="0.1"/>
+    <circle cx="400" cy="620" r="600" stroke="#14b8a6" opacity="0.05"/>
+  </g>
+
+  <!-- Distorted/broken ring segments -->
+  <g fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3">
+    <path d="M 300,460 Q 280,400 320,350" />
+    <path d="M 500,460 Q 520,400 480,350" />
+    <path d="M 250,700 Q 220,750 260,800" />
+    <path d="M 550,700 Q 580,750 540,800" />
+  </g>
+
+  <!-- Flying debris chunks -->
+  <g opacity="0.7">
+    <!-- Teal fragments -->
+    <polygon points="180,300 200,290 210,310 190,315" fill="#14b8a6" transform="rotate(25 195 303)"/>
+    <polygon points="620,280 645,275 650,300 630,302" fill="#14b8a6" transform="rotate(-30 635 288)"/>
+    <polygon points="120,550 140,540 148,560 128,565" fill="#0d9488" transform="rotate(60 134 553)"/>
+    <polygon points="680,570 700,560 705,578 688,582" fill="#0d9488" transform="rotate(-50 692 571)"/>
+    <polygon points="250,180 270,170 278,195 258,198" fill="#14b8a6" transform="rotate(15 264 184)"/>
+    <polygon points="550,200 575,190 580,215 560,218" fill="#14b8a6" transform="rotate(-20 565 204)"/>
+
+    <!-- Maroon fragments -->
+    <polygon points="150,750 170,740 178,762 158,766" fill="#a52020" transform="rotate(40 164 753)"/>
+    <polygon points="650,730 672,722 678,745 658,748" fill="#a52020" transform="rotate(-35 664 735)"/>
+    <polygon points="100,400 118,388 126,412 108,416" fill="#7f1d1d" transform="rotate(70 113 402)"/>
+    <polygon points="700,420 720,410 726,432 708,436" fill="#7f1d1d" transform="rotate(-65 713 423)"/>
+
+    <!-- White fragments -->
+    <rect x="220" y="240" width="8" height="8" fill="#ffffff" opacity="0.5" transform="rotate(45 224 244)"/>
+    <rect x="570" y="260" width="6" height="6" fill="#ffffff" opacity="0.4" transform="rotate(30 573 263)"/>
+    <rect x="160" y="650" width="7" height="7" fill="#ffffff" opacity="0.3" transform="rotate(55 163 653)"/>
+    <rect x="640" y="680" width="5" height="5" fill="#ffffff" opacity="0.35" transform="rotate(20 642 682)"/>
+    <rect x="300" y="150" width="6" height="6" fill="#ffffff" opacity="0.4" transform="rotate(80 303 153)"/>
+    <rect x="500" y="1050" width="7" height="7" fill="#ffffff" opacity="0.3" transform="rotate(35 503 1053)"/>
+    <rect x="300" y="1000" width="5" height="5" fill="#ffffff" opacity="0.25" transform="rotate(60 302 1002)"/>
+  </g>
+
+  <!-- Energy crackle arcs -->
+  <g fill="none" stroke-width="2" filter="url(#burstGlow)">
+    <path d="M 400,540 Q 420,500 380,460 Q 360,430 390,380 Q 410,350 380,300" stroke="#14b8a6" opacity="0.6"/>
+    <path d="M 340,600 Q 300,580 280,560 Q 250,530 230,540 Q 200,550 170,520" stroke="#14b8a6" opacity="0.5"/>
+    <path d="M 460,600 Q 500,580 520,560 Q 550,530 570,540 Q 600,550 630,520" stroke="#14b8a6" opacity="0.5"/>
+    <path d="M 400,700 Q 420,740 380,780 Q 360,810 390,860 Q 410,890 380,940" stroke="#a52020" opacity="0.5"/>
+    <path d="M 340,640 Q 300,660 260,700 Q 230,730 200,710 Q 170,690 130,720" stroke="#a52020" opacity="0.4"/>
+    <path d="M 460,640 Q 500,660 540,700 Q 570,730 600,710 Q 630,690 670,720" stroke="#a52020" opacity="0.4"/>
+  </g>
+
+  <!-- SFX text radiating -->
+  <text x="400" y="250" text-anchor="middle" font-family="'Impact', 'Arial Black', sans-serif" font-size="120" font-weight="900" fill="#ffffff" opacity="0.08" letter-spacing="30">BOOM</text>
+  <text x="400" y="1150" text-anchor="middle" font-family="'Impact', 'Arial Black', sans-serif" font-size="80" font-weight="900" fill="#a52020" opacity="0.1" letter-spacing="20">BOOM</text>
+
+  <!-- Panel edge burn effect -->
+  <g opacity="0.6">
+    <rect x="0" y="0" width="800" height="30" fill="#0a0a0a"/>
+    <rect x="0" y="1370" width="800" height="30" fill="#0a0a0a"/>
+    <rect x="0" y="0" width="20" height="1400" fill="#0a0a0a"/>
+    <rect x="780" y="0" width="20" height="1400" fill="#0a0a0a"/>
+  </g>
+
+  <!-- Cracked border -->
+  <g stroke="#a52020" stroke-width="2" fill="none" opacity="0.4">
+    <polyline points="0,0 350,0"/>
+    <polyline points="370,0 380,20 400,0 420,15 450,0 800,0"/>
+    <polyline points="800,0 800,550"/>
+    <polyline points="800,580 785,600 800,630 790,660 800,700 800,1400"/>
+    <polyline points="800,1400 430,1400"/>
+    <polyline points="400,1400 410,1380 380,1400 350,1385 320,1400 0,1400"/>
+    <polyline points="0,1400 0,750"/>
+    <polyline points="0,720 15,700 0,670 12,640 0,600 0,0"/>
+  </g>
+</svg>

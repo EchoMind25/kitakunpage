@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" width="800" height="1200">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#151515"/>
+    </linearGradient>
+    <radialGradient id="lightSource" cx="0.5" cy="0.25" r="0.7" fx="0.5" fy="0.2">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="15%" stop-color="#14b8a6" stop-opacity="0.3"/>
+      <stop offset="40%" stop-color="#0d9488" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rayGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#14b8a6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rayGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="maroonRay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a52020" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#a52020" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="rayBlur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="bigSoftGlow">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="medGlow">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <clipPath id="panelClip3">
+      <rect width="800" height="1200"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1200" fill="url(#bg3)"/>
+
+  <g clip-path="url(#panelClip3)">
+    <!-- Atmospheric haze at top -->
+    <ellipse cx="400" cy="150" rx="500" ry="300" fill="#0d9488" opacity="0.05" filter="url(#bigSoftGlow)"/>
+
+    <!-- Main light rays from top center -->
+    <g filter="url(#rayBlur)">
+      <!-- Wide teal rays -->
+      <polygon points="400,0 -100,1200 50,1200" fill="url(#rayGrad)" opacity="0.4"/>
+      <polygon points="400,0 100,1200 250,1200" fill="url(#rayGrad)" opacity="0.3"/>
+      <polygon points="400,0 300,1200 420,1200" fill="url(#rayGrad)" opacity="0.5"/>
+      <polygon points="400,0 480,1200 580,1200" fill="url(#rayGrad)" opacity="0.3"/>
+      <polygon points="400,0 650,1200 780,1200" fill="url(#rayGrad)" opacity="0.4"/>
+      <polygon points="400,0 820,1200 950,1200" fill="url(#rayGrad)" opacity="0.25"/>
+
+      <!-- Narrow bright white rays -->
+      <polygon points="400,0 180,1200 210,1200" fill="url(#rayGrad2)" opacity="0.6"/>
+      <polygon points="400,0 380,1200 400,1200" fill="url(#rayGrad2)" opacity="0.7"/>
+      <polygon points="400,0 560,1200 585,1200" fill="url(#rayGrad2)" opacity="0.5"/>
+      <polygon points="400,0 700,1200 718,1200" fill="url(#rayGrad2)" opacity="0.4"/>
+
+      <!-- Maroon accent rays -->
+      <polygon points="400,0 30,1200 80,1200" fill="url(#maroonRay)" opacity="0.5"/>
+      <polygon points="400,0 450,1200 490,1200" fill="url(#maroonRay)" opacity="0.4"/>
+      <polygon points="400,0 740,1200 790,1200" fill="url(#maroonRay)" opacity="0.5"/>
+    </g>
+
+    <!-- Light source glow -->
+    <circle cx="400" cy="100" r="300" fill="url(#lightSource)"/>
+    <circle cx="400" cy="80" r="80" fill="#ffffff" opacity="0.08" filter="url(#bigSoftGlow)"/>
+    <circle cx="400" cy="80" r="30" fill="#ffffff" opacity="0.15" filter="url(#medGlow)"/>
+
+    <!-- Dust particles floating in light -->
+    <g fill="#ffffff">
+      <circle cx="250" cy="300" r="2" opacity="0.6"/>
+      <circle cx="500" cy="250" r="1.5" opacity="0.5"/>
+      <circle cx="350" cy="500" r="2.5" opacity="0.4"/>
+      <circle cx="550" cy="450" r="1.8" opacity="0.5"/>
+      <circle cx="200" cy="600" r="2" opacity="0.3"/>
+      <circle cx="600" cy="550" r="1.5" opacity="0.4"/>
+      <circle cx="450" cy="700" r="2.2" opacity="0.3"/>
+      <circle cx="300" cy="800" r="1.5" opacity="0.2"/>
+      <circle cx="150" cy="450" r="1.8" opacity="0.4"/>
+      <circle cx="650" cy="350" r="2" opacity="0.5"/>
+      <circle cx="380" cy="380" r="1.2" opacity="0.6"/>
+      <circle cx="420" cy="620" r="1.8" opacity="0.35"/>
+      <circle cx="530" cy="700" r="1.3" opacity="0.25"/>
+      <circle cx="270" cy="550" r="2.5" opacity="0.3"/>
+      <circle cx="480" cy="150" r="1.5" opacity="0.7"/>
+      <circle cx="320" cy="200" r="1" opacity="0.65"/>
+    </g>
+
+    <!-- Teal-tinted dust -->
+    <g fill="#14b8a6">
+      <circle cx="180" cy="350" r="1.5" opacity="0.5"/>
+      <circle cx="620" cy="480" r="2" opacity="0.4"/>
+      <circle cx="340" cy="650" r="1.8" opacity="0.3"/>
+      <circle cx="500" cy="850" r="1.5" opacity="0.2"/>
+      <circle cx="430" cy="280" r="1.2" opacity="0.5"/>
+    </g>
+
+    <!-- Silhouette figure standing in light -->
+    <g opacity="0.85">
+      <!-- Body -->
+      <ellipse cx="400" cy="1050" rx="60" ry="15" fill="#0a0a0a" opacity="0.5"/>
+      <polygon points="370,700 400,650 430,700 440,950 420,1050 380,1050 360,950" fill="#0a0a0a"/>
+      <!-- Head -->
+      <circle cx="400" cy="620" r="40" fill="#0a0a0a"/>
+      <!-- Arms slightly out -->
+      <polygon points="370,720 310,820 320,830 375,740" fill="#0a0a0a"/>
+      <polygon points="430,720 490,820 480,830 425,740" fill="#0a0a0a"/>
+      <!-- Legs -->
+      <polygon points="385,950 370,1100 390,1100 400,960" fill="#0a0a0a"/>
+      <polygon points="415,950 430,1100 410,1100 400,960" fill="#0a0a0a"/>
+
+      <!-- Teal rim light on figure edges -->
+      <path d="M 360,650 Q 370,600 400,580 Q 365,610 365,660" fill="#14b8a6" opacity="0.4"/>
+      <path d="M 440,650 Q 430,600 400,580 Q 435,610 435,660" fill="#14b8a6" opacity="0.4"/>
+      <line x1="365" y1="700" x2="358" y2="950" stroke="#14b8a6" stroke-width="1.5" opacity="0.3"/>
+      <line x1="435" y1="700" x2="442" y2="950" stroke="#14b8a6" stroke-width="1.5" opacity="0.3"/>
+    </g>
+
+    <!-- Floor reflection -->
+    <g opacity="0.15">
+      <polygon points="350,1100 400,1050 450,1100 430,1200 370,1200" fill="#14b8a6"/>
+    </g>
+  </g>
+
+  <!-- Vignette overlay -->
+  <rect width="800" height="1200" fill="url(#lightSource)" opacity="0.3"/>
+
+  <!-- Subtle frame -->
+  <rect x="2" y="2" width="796" height="1196" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.2"/>
+</svg>

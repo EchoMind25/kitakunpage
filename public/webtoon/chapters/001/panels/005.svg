@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" width="800" height="1200">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="50%" stop-color="#0f0f0f"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#14b8a6" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#14b8a6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7f1d1d" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#a52020" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#a52020" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7f1d1d" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="waveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="energyCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.25"/>
+      <stop offset="30%" stop-color="#0d9488" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="waveGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softBlur5">
+      <feGaussianBlur stdDeviation="25"/>
+    </filter>
+    <filter id="medBlur">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1200" fill="url(#bg5)"/>
+
+  <!-- Central energy source glow -->
+  <circle cx="400" cy="600" r="300" fill="url(#energyCore)" filter="url(#softBlur5)"/>
+  <circle cx="400" cy="600" r="150" fill="#14b8a6" opacity="0.03" filter="url(#softBlur5)"/>
+
+  <!-- Wave layer 1 - large teal waves -->
+  <g filter="url(#waveGlow)" opacity="0.7">
+    <path d="M0,300 C100,280 200,320 300,280 C400,240 450,260 500,300 C550,340 650,280 800,310" fill="none" stroke="url(#waveGrad1)" stroke-width="2"/>
+    <path d="M0,350 C120,330 220,370 340,330 C440,290 490,340 560,360 C620,380 700,330 800,355" fill="none" stroke="url(#waveGrad1)" stroke-width="1.5" opacity="0.6"/>
+    <path d="M0,400 C80,380 180,420 280,390 C380,360 480,410 580,380 C680,350 740,390 800,400" fill="none" stroke="url(#waveGrad1)" stroke-width="1" opacity="0.4"/>
+  </g>
+
+  <!-- Wave layer 2 - central energy waves -->
+  <g filter="url(#waveGlow)" opacity="0.8">
+    <path d="M0,520 C100,480 200,560 300,510 C350,485 420,530 500,500 C580,470 680,540 800,520" fill="none" stroke="url(#waveGrad1)" stroke-width="2.5"/>
+    <path d="M0,560 C80,530 180,590 280,550 C380,510 440,570 540,540 C620,515 720,575 800,555" fill="none" stroke="#14b8a6" stroke-width="1.5" opacity="0.5"/>
+    <path d="M0,600 C130,570 230,630 350,590 C430,560 500,620 600,585 C700,555 750,600 800,595" fill="none" stroke="url(#waveGrad3)" stroke-width="1"/>
+  </g>
+
+  <!-- Central intense wave band -->
+  <g filter="url(#waveGlow)">
+    <path d="M0,620 C100,590 200,660 320,610 C400,580 460,650 560,615 C660,580 740,640 800,620" fill="none" stroke="url(#waveGrad1)" stroke-width="3" opacity="0.9"/>
+    <path d="M0,640 C90,660 190,610 310,650 C400,680 480,620 580,655 C660,680 730,630 800,650" fill="none" stroke="url(#waveGrad2)" stroke-width="2.5" opacity="0.7"/>
+    <path d="M0,660 C120,640 220,680 340,650 C420,630 500,670 600,645 C700,625 760,660 800,655" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.15"/>
+  </g>
+
+  <!-- Wave layer 3 - maroon waves below center -->
+  <g filter="url(#waveGlow)" opacity="0.7">
+    <path d="M0,720 C110,700 210,750 330,710 C430,680 510,740 620,710 C710,685 760,720 800,715" fill="none" stroke="url(#waveGrad2)" stroke-width="2"/>
+    <path d="M0,770 C90,750 190,790 310,760 C410,735 500,780 600,755 C700,730 750,770 800,760" fill="none" stroke="url(#waveGrad2)" stroke-width="1.5" opacity="0.5"/>
+    <path d="M0,820 C130,800 230,840 350,810 C450,785 530,825 640,800 C720,780 770,810 800,805" fill="none" stroke="url(#waveGrad2)" stroke-width="1" opacity="0.3"/>
+  </g>
+
+  <!-- Wave layer 4 - fading outer waves -->
+  <g opacity="0.3">
+    <path d="M0,180 C150,160 300,200 450,170 C550,150 680,190 800,175" fill="none" stroke="#0d9488" stroke-width="1"/>
+    <path d="M0,220 C120,200 260,240 400,210 C520,185 660,225 800,210" fill="none" stroke="#0d9488" stroke-width="0.8" opacity="0.6"/>
+  </g>
+  <g opacity="0.25">
+    <path d="M0,940 C140,920 280,960 420,930 C540,905 680,945 800,935" fill="none" stroke="#7f1d1d" stroke-width="1"/>
+    <path d="M0,990 C100,970 240,1010 380,980 C500,955 650,990 800,980" fill="none" stroke="#7f1d1d" stroke-width="0.8" opacity="0.6"/>
+  </g>
+
+  <!-- Energy particles scattered along waves -->
+  <g fill="#14b8a6" opacity="0.6">
+    <circle cx="150" cy="530" r="2" filter="url(#waveGlow)"/>
+    <circle cx="300" cy="510" r="1.5"/>
+    <circle cx="450" cy="540" r="2.5" filter="url(#waveGlow)"/>
+    <circle cx="600" cy="520" r="1.5"/>
+    <circle cx="700" cy="535" r="2"/>
+  </g>
+  <g fill="#a52020" opacity="0.5">
+    <circle cx="120" cy="650" r="2"/>
+    <circle cx="280" cy="660" r="1.5"/>
+    <circle cx="420" cy="640" r="2" filter="url(#waveGlow)"/>
+    <circle cx="570" cy="655" r="1.5"/>
+    <circle cx="700" cy="645" r="2"/>
+  </g>
+  <g fill="#ffffff" opacity="0.3">
+    <circle cx="200" cy="600" r="1"/>
+    <circle cx="380" cy="610" r="1.5"/>
+    <circle cx="520" cy="595" r="1"/>
+    <circle cx="650" cy="605" r="1.5"/>
+  </g>
+
+  <!-- Vertical energy wisps -->
+  <path d="M250,400 Q260,500 245,600 Q240,700 255,800" fill="none" stroke="#14b8a6" stroke-width="0.8" opacity="0.12"/>
+  <path d="M400,350 Q410,480 395,600 Q390,720 405,850" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.08"/>
+  <path d="M550,420 Q540,520 555,620 Q560,720 545,820" fill="none" stroke="#a52020" stroke-width="0.8" opacity="0.1"/>
+
+  <!-- Very faint horizontal interference pattern -->
+  <g opacity="0.015" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="440" x2="800" y2="440"/>
+    <line x1="0" y1="480" x2="800" y2="480"/>
+    <line x1="0" y1="560" x2="800" y2="560"/>
+    <line x1="0" y1="640" x2="800" y2="640"/>
+    <line x1="0" y1="720" x2="800" y2="720"/>
+    <line x1="0" y1="760" x2="800" y2="760"/>
+  </g>
+
+  <!-- Outer faint concentric arcs from center -->
+  <g opacity="0.06" fill="none" stroke-width="0.5">
+    <circle cx="400" cy="600" r="100" stroke="#14b8a6"/>
+    <circle cx="400" cy="600" r="180" stroke="#14b8a6"/>
+    <circle cx="400" cy="600" r="260" stroke="#0d9488"/>
+    <circle cx="400" cy="600" r="340" stroke="#a52020"/>
+    <circle cx="400" cy="600" r="420" stroke="#7f1d1d"/>
+    <circle cx="400" cy="600" r="500" stroke="#7f1d1d"/>
+  </g>
+
+  <!-- Border -->
+  <rect x="15" y="15" width="770" height="1170" fill="none" stroke="#14b8a6" stroke-width="0.5" opacity="0.1"/>
+</svg>

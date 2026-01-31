@@ -1,0 +1,61 @@
+{
+  "chapterId": 1,
+  "title": "Chapter 1: The Beginning",
+  "publishDate": "2026-02-01",
+  "panels": [
+    {
+      "id": 1,
+      "filename": "001.svg",
+      "width": 800,
+      "height": 1200,
+      "fileSize": 12000,
+      "blurHash": "LGF5]+Yk^6#M@-5c,1J5@[or[Q6."
+    },
+    {
+      "id": 2,
+      "filename": "002.svg",
+      "width": 800,
+      "height": 1200,
+      "fileSize": 12000,
+      "blurHash": "L6Pj0^jE.AyE_3t7t7R**0o#DgR4"
+    },
+    {
+      "id": 3,
+      "filename": "003.svg",
+      "width": 800,
+      "height": 1200,
+      "fileSize": 12000,
+      "blurHash": "LGF5]+Yk^6#M@-5c,1J5@[or[Q6."
+    },
+    {
+      "id": 4,
+      "filename": "004.svg",
+      "width": 800,
+      "height": 1400,
+      "fileSize": 14000,
+      "blurHash": "L6Pj0^jE.AyE_3t7t7R**0o#DgR4"
+    },
+    {
+      "id": 5,
+      "filename": "005.svg",
+      "width": 800,
+      "height": 1200,
+      "fileSize": 12000,
+      "blurHash": "LGF5]+Yk^6#M@-5c,1J5@[or[Q6."
+    },
+    {
+      "id": 6,
+      "filename": "006.svg",
+      "width": 800,
+      "height": 1000,
+      "fileSize": 10000,
+      "blurHash": "L6Pj0^jE.AyE_3t7t7R**0o#DgR4"
+    }
+  ],
+  "totalPanels": 6,
+  "estimatedReadTime": 2,
+  "prevChapter": null,
+  "nextChapter": 2,
+  "author": "kitakun03",
+  "notes": "The journey begins here."
+}

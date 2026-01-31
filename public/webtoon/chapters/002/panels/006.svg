@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="50%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="horizonLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="30%" stop-color="#14b8a6"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0.15"/>
+      <stop offset="40%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7f1d1d" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.3"/>
+      <stop offset="40%" stop-color="#0d9488" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="textGlow6">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="softGlow6">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="starGlow">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <pattern id="perspGrid" width="800" height="1000" patternUnits="userSpaceOnUse">
+      <!-- Converging perspective lines to horizon -->
+      <line x1="400" y1="580" x2="0" y2="1000" stroke="#14b8a6" stroke-width="0.3" opacity="0.1"/>
+      <line x1="400" y1="580" x2="100" y2="1000" stroke="#14b8a6" stroke-width="0.3" opacity="0.1"/>
+      <line x1="400" y1="580" x2="200" y2="1000" stroke="#14b8a6" stroke-width="0.3" opacity="0.1"/>
+      <line x1="400" y1="580" x2="300" y2="1000" stroke="#14b8a6" stroke-width="0.3" opacity="0.1"/>
+      <line x1="400" y1="580" x2="500" y2="1000" stroke="#14b8a6" stroke-width="0.3" opacity="0.1"/>
+      <line x1="400" y1="580" x2="600" y2="1000" stroke="#14b8a6" stroke-width="0.3" opacity="0.1"/>
+      <line x1="400" y1="580" x2="700" y2="1000" stroke="#14b8a6" stroke-width="0.3" opacity="0.1"/>
+      <line x1="400" y1="580" x2="800" y2="1000" stroke="#14b8a6" stroke-width="0.3" opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1000" fill="url(#bg6)"/>
+
+  <!-- Sky gradient -->
+  <rect x="0" y="0" width="800" height="580" fill="url(#skyGrad)"/>
+
+  <!-- Stars -->
+  <g fill="#ffffff">
+    <circle cx="120" cy="80" r="1.5" opacity="0.6"/>
+    <circle cx="300" cy="120" r="1" opacity="0.4"/>
+    <circle cx="500" cy="60" r="1.5" opacity="0.5"/>
+    <circle cx="680" cy="100" r="1" opacity="0.5"/>
+    <circle cx="200" cy="200" r="1.2" opacity="0.3"/>
+    <circle cx="600" cy="180" r="1.5" opacity="0.4"/>
+    <circle cx="50" cy="150" r="1" opacity="0.3"/>
+    <circle cx="750" cy="50" r="1.2" opacity="0.5"/>
+    <circle cx="400" cy="40" r="1" opacity="0.3"/>
+    <circle cx="350" cy="250" r="0.8" opacity="0.3"/>
+    <circle cx="550" cy="280" r="1" opacity="0.25"/>
+    <circle cx="150" cy="300" r="0.8" opacity="0.2"/>
+    <circle cx="650" cy="320" r="1" opacity="0.2"/>
+    <circle cx="80" cy="250" r="1.2" opacity="0.35"/>
+    <circle cx="720" cy="230" r="0.8" opacity="0.3"/>
+    <circle cx="450" cy="170" r="1.2" opacity="0.4" filter="url(#starGlow)"/>
+    <circle cx="250" cy="70" r="1.5" opacity="0.5" filter="url(#starGlow)"/>
+    <circle cx="630" cy="140" r="1.3" opacity="0.45" filter="url(#starGlow)"/>
+  </g>
+
+  <!-- Moon/orb in upper area -->
+  <circle cx="600" cy="200" r="100" fill="url(#moonGlow)"/>
+  <circle cx="600" cy="200" r="30" fill="#14b8a6" opacity="0.1"/>
+  <circle cx="600" cy="200" r="15" fill="#14b8a6" opacity="0.15" filter="url(#softGlow6)"/>
+  <circle cx="600" cy="200" r="5" fill="#ffffff" opacity="0.3"/>
+
+  <!-- Distant city/structure silhouettes on horizon -->
+  <g fill="#0a0a0a" opacity="0.9">
+    <rect x="80" y="540" width="20" height="40"/>
+    <rect x="110" y="550" width="15" height="30"/>
+    <rect x="140" y="530" width="25" height="50"/>
+    <rect x="175" y="545" width="18" height="35"/>
+    <rect x="200" y="555" width="12" height="25"/>
+
+    <rect x="560" y="545" width="22" height="35"/>
+    <rect x="590" y="535" width="18" height="45"/>
+    <rect x="620" y="550" width="28" height="30"/>
+    <rect x="660" y="540" width="15" height="40"/>
+    <rect x="685" y="555" width="20" height="25"/>
+    <rect x="715" y="548" width="12" height="32"/>
+  </g>
+
+  <!-- Horizon line -->
+  <rect x="0" y="578" width="800" height="3" fill="url(#horizonLine)" opacity="0.6"/>
+  <rect x="0" y="576" width="800" height="1" fill="#14b8a6" opacity="0.2"/>
+  <rect x="0" y="583" width="800" height="1" fill="#14b8a6" opacity="0.15"/>
+
+  <!-- Ground gradient -->
+  <rect x="0" y="580" width="800" height="420" fill="url(#groundGrad)"/>
+
+  <!-- Perspective grid on ground -->
+  <rect x="0" y="580" width="800" height="420" fill="url(#perspGrid)"/>
+
+  <!-- Horizontal ground lines fading into distance -->
+  <g stroke="#14b8a6" stroke-width="0.5" opacity="0.08">
+    <line x1="0" y1="620" x2="800" y2="620"/>
+    <line x1="0" y1="670" x2="800" y2="670"/>
+    <line x1="0" y1="730" x2="800" y2="730"/>
+    <line x1="0" y1="800" x2="800" y2="800"/>
+    <line x1="0" y1="880" x2="800" y2="880"/>
+    <line x1="0" y1="970" x2="800" y2="970"/>
+  </g>
+
+  <!-- Small silhouette figure walking away on horizon -->
+  <g opacity="0.8">
+    <rect x="394" y="555" width="12" height="24" fill="#0a0a0a"/>
+    <circle cx="400" cy="550" r="6" fill="#0a0a0a"/>
+    <!-- Tiny teal glow on figure -->
+    <circle cx="400" cy="560" r="10" fill="#14b8a6" opacity="0.1" filter="url(#softGlow6)"/>
+  </g>
+
+  <!-- "To Be Continued..." text area -->
+  <g>
+    <!-- Decorative maroon thin lines flanking text -->
+    <line x1="200" y1="700" x2="350" y2="700" stroke="#a52020" stroke-width="1" opacity="0.5"/>
+    <line x1="450" y1="700" x2="600" y2="700" stroke="#a52020" stroke-width="1" opacity="0.5"/>
+
+    <!-- Small diamond accent -->
+    <polygon points="400,694 406,700 400,706 394,700" fill="#a52020" opacity="0.6"/>
+
+    <!-- Main text -->
+    <text x="400" y="760" text-anchor="middle" font-family="'Georgia', serif" font-size="42" fill="#ffffff" opacity="0.85" letter-spacing="3" filter="url(#textGlow6)">To Be Continued</text>
+
+    <!-- Ellipsis styled separately -->
+    <text x="400" y="800" text-anchor="middle" font-family="'Georgia', serif" font-size="36" fill="#14b8a6" opacity="0.6" letter-spacing="15">. . .</text>
+
+    <!-- Underline decoration -->
+    <line x1="250" y1="820" x2="550" y2="820" stroke="#14b8a6" stroke-width="1" opacity="0.3"/>
+    <line x1="300" y1="828" x2="500" y2="828" stroke="#14b8a6" stroke-width="0.5" opacity="0.2"/>
+  </g>
+
+  <!-- Chapter / attribution -->
+  <text x="400" y="900" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#14b8a6" opacity="0.3" letter-spacing="6">CHAPTER 02 END</text>
+
+  <!-- Maroon accent dots -->
+  <g fill="#a52020" opacity="0.3">
+    <circle cx="330" cy="900" r="2"/>
+    <circle cx="470" cy="900" r="2"/>
+  </g>
+
+  <!-- Outer frame -->
+  <rect x="3" y="3" width="794" height="994" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.15" rx="2"/>
+
+  <!-- Corner marks - different style from Ch1 (angled cuts) -->
+  <g stroke="#a52020" stroke-width="2" fill="none" opacity="0.4">
+    <path d="M 20,3 L 3,3 L 3,20"/>
+    <path d="M 780,3 L 797,3 L 797,20"/>
+    <path d="M 20,997 L 3,997 L 3,980"/>
+    <path d="M 780,997 L 797,997 L 797,980"/>
+  </g>
+</svg>

@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1400" width="800" height="1400">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <linearGradient id="diag1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#14b8a6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#14b8a6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="diag2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a52020" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#a52020" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#a52020" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="shardFill1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#14b8a6" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="shardFill2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7f1d1d" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#a52020" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="lightBeam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#14b8a6" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shardGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="bigBlur">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <clipPath id="mainClip">
+      <rect x="0" y="0" width="800" height="1400"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1400" fill="url(#bg4)"/>
+
+  <!-- Dramatic diagonal light beams -->
+  <g clip-path="url(#mainClip)" opacity="0.6">
+    <!-- Primary teal beam -->
+    <polygon points="-100,0 300,0 900,1400 500,1400" fill="url(#diag1)" opacity="0.3"/>
+    <!-- Secondary maroon beam -->
+    <polygon points="400,0 700,0 1200,1400 900,1400" fill="url(#diag2)" opacity="0.25"/>
+    <!-- Thin white accent beam -->
+    <polygon points="200,0 240,0 840,1400 800,1400" fill="#ffffff" opacity="0.02"/>
+  </g>
+
+  <!-- Large ambient glow at intersection area -->
+  <circle cx="400" cy="600" r="200" fill="#14b8a6" opacity="0.04" filter="url(#bigBlur)"/>
+  <circle cx="500" cy="800" r="150" fill="#a52020" opacity="0.03" filter="url(#bigBlur)"/>
+
+  <!-- Diagonal shard shapes - teal side -->
+  <polygon points="80,200 220,120 350,500 200,580" fill="url(#shardFill1)" stroke="#14b8a6" stroke-width="1" opacity="0.5"/>
+  <polygon points="120,620 280,540 380,850 230,920" fill="url(#shardFill1)" stroke="#0d9488" stroke-width="0.8" opacity="0.35"/>
+  <polygon points="60,950 210,870 300,1120 160,1180" fill="url(#shardFill1)" stroke="#14b8a6" stroke-width="0.6" opacity="0.25"/>
+
+  <!-- Diagonal shard shapes - maroon side -->
+  <polygon points="520,100 680,30 780,380 620,440" fill="url(#shardFill2)" stroke="#a52020" stroke-width="1" opacity="0.45"/>
+  <polygon points="480,480 650,400 740,720 580,790" fill="url(#shardFill2)" stroke="#7f1d1d" stroke-width="0.8" opacity="0.3"/>
+  <polygon points="540,830 700,750 780,1050 630,1120" fill="url(#shardFill2)" stroke="#a52020" stroke-width="0.6" opacity="0.25"/>
+  <polygon points="580,1160 720,1090 790,1320 650,1380" fill="url(#shardFill2)" stroke="#7f1d1d" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Central fracture line -->
+  <path d="M350,0 L370,180 L340,350 L380,520 L350,700 L390,880 L360,1050 L400,1200 L370,1400" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.12"/>
+  <path d="M350,0 L370,180 L340,350 L380,520 L350,700 L390,880 L360,1050 L400,1200 L370,1400" fill="none" stroke="#14b8a6" stroke-width="4" opacity="0.05" filter="url(#shardGlow)"/>
+
+  <!-- Small sharp triangular fragments near fracture -->
+  <polygon points="360,250 385,230 375,270" fill="#14b8a6" opacity="0.3" filter="url(#shardGlow)"/>
+  <polygon points="345,500 370,480 365,530" fill="#a52020" opacity="0.25"/>
+  <polygon points="375,680 398,660 390,710" fill="#14b8a6" opacity="0.2"/>
+  <polygon points="355,900 380,885 372,925" fill="#ffffff" opacity="0.1"/>
+  <polygon points="380,1100 405,1080 395,1130" fill="#a52020" opacity="0.2"/>
+
+  <!-- Speed lines / motion streaks -->
+  <g opacity="0.08" stroke="#14b8a6" stroke-width="0.5">
+    <line x1="0" y1="300" x2="300" y2="200"/>
+    <line x1="0" y1="500" x2="280" y2="420"/>
+    <line x1="0" y1="700" x2="260" y2="640"/>
+    <line x1="0" y1="900" x2="240" y2="850"/>
+    <line x1="0" y1="1100" x2="220" y2="1060"/>
+  </g>
+  <g opacity="0.06" stroke="#a52020" stroke-width="0.5">
+    <line x1="800" y1="200" x2="500" y2="300"/>
+    <line x1="800" y1="400" x2="520" y2="480"/>
+    <line x1="800" y1="600" x2="540" y2="660"/>
+    <line x1="800" y1="800" x2="560" y2="860"/>
+    <line x1="800" y1="1000" x2="580" y2="1060"/>
+    <line x1="800" y1="1200" x2="600" y2="1250"/>
+  </g>
+
+  <!-- Bright point at focal area -->
+  <circle cx="370" cy="520" r="40" fill="#14b8a6" opacity="0.06" filter="url(#bigBlur)"/>
+  <circle cx="370" cy="520" r="4" fill="#14b8a6" opacity="0.5" filter="url(#shardGlow)"/>
+  <circle cx="370" cy="520" r="1.5" fill="#ffffff" opacity="0.8"/>
+
+  <!-- Scattered debris particles -->
+  <g fill="#14b8a6" opacity="0.3">
+    <rect x="310" y="280" width="3" height="3" transform="rotate(35, 311, 281)"/>
+    <rect x="400" y="450" width="2" height="2" transform="rotate(60, 401, 451)"/>
+    <rect x="330" y="650" width="2.5" height="2.5" transform="rotate(15, 331, 651)"/>
+    <rect x="390" y="800" width="2" height="2" transform="rotate(45, 391, 801)"/>
+  </g>
+  <g fill="#a52020" opacity="0.25">
+    <rect x="420" y="350" width="2.5" height="2.5" transform="rotate(25, 421, 351)"/>
+    <rect x="380" y="580" width="3" height="3" transform="rotate(50, 381, 581)"/>
+    <rect x="410" y="920" width="2" height="2" transform="rotate(70, 411, 921)"/>
+    <rect x="360" y="1150" width="2.5" height="2.5" transform="rotate(30, 361, 1151)"/>
+  </g>
+
+  <!-- Subtle horizontal scan lines -->
+  <g opacity="0.03" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+    <line x1="0" y1="900" x2="800" y2="900"/>
+    <line x1="0" y1="1100" x2="800" y2="1100"/>
+    <line x1="0" y1="1300" x2="800" y2="1300"/>
+  </g>
+
+  <!-- Border -->
+  <rect x="15" y="15" width="770" height="1370" fill="none" stroke="#14b8a6" stroke-width="0.5" opacity="0.12"/>
+</svg>

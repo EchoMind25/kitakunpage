@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1400" width="800" height="1400">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="40%" stop-color="#121212"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="motionTeal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#14b8a6" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#0d9488" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="motionMaroon" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#a52020" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#a52020" stop-opacity="0.7"/>
+      <stop offset="70%" stop-color="#7f1d1d" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7f1d1d" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="impactPoint" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="20%" stop-color="#14b8a6" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#7f1d1d" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="motionBlur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12,0"/>
+    </filter>
+    <filter id="hardGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="bigBlur">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1400" fill="url(#bg2)"/>
+
+  <!-- Speed lines radiating from impact point -->
+  <g opacity="0.25" stroke="#14b8a6" stroke-width="1">
+    <line x1="420" y1="650" x2="0" y2="0"/>
+    <line x1="420" y1="650" x2="160" y2="0"/>
+    <line x1="420" y1="650" x2="350" y2="0"/>
+    <line x1="420" y1="650" x2="550" y2="0"/>
+    <line x1="420" y1="650" x2="800" y2="0"/>
+    <line x1="420" y1="650" x2="800" y2="200"/>
+    <line x1="420" y1="650" x2="800" y2="450"/>
+    <line x1="420" y1="650" x2="0" y2="300"/>
+    <line x1="420" y1="650" x2="0" y2="550"/>
+    <line x1="420" y1="650" x2="0" y2="900"/>
+    <line x1="420" y1="650" x2="0" y2="1200"/>
+    <line x1="420" y1="650" x2="0" y2="1400"/>
+    <line x1="420" y1="650" x2="200" y2="1400"/>
+    <line x1="420" y1="650" x2="500" y2="1400"/>
+    <line x1="420" y1="650" x2="800" y2="1400"/>
+    <line x1="420" y1="650" x2="800" y2="1100"/>
+    <line x1="420" y1="650" x2="800" y2="800"/>
+  </g>
+
+  <!-- Figure 1 - Teal silhouette attacking from left -->
+  <g filter="url(#motionBlur)" opacity="0.4">
+    <rect x="50" y="350" width="350" height="8" fill="url(#motionTeal)" rx="4"/>
+    <rect x="80" y="420" width="320" height="6" fill="url(#motionTeal)" rx="3"/>
+    <rect x="30" y="500" width="370" height="8" fill="url(#motionTeal)" rx="4"/>
+    <rect x="60" y="580" width="340" height="5" fill="url(#motionTeal)" rx="2"/>
+    <rect x="90" y="630" width="310" height="7" fill="url(#motionTeal)" rx="3"/>
+  </g>
+
+  <!-- Figure 1 - Teal combatant (stylized angular shape) -->
+  <g>
+    <polygon points="280,320 350,420 380,600 360,780 300,850 250,780 220,600 230,420" fill="#0d9488" opacity="0.7"/>
+    <polygon points="280,320 350,420 380,600 360,780 300,850 250,780 220,600 230,420" fill="none" stroke="#14b8a6" stroke-width="2"/>
+    <!-- Arm reaching toward impact -->
+    <polygon points="350,420 480,540 420,580 380,600 360,500" fill="#0d9488" opacity="0.8"/>
+    <line x1="350" y1="420" x2="480" y2="540" stroke="#14b8a6" stroke-width="2"/>
+    <line x1="480" y1="540" x2="420" y2="580" stroke="#14b8a6" stroke-width="2"/>
+    <!-- Leg in motion -->
+    <polygon points="300,850 340,1000 310,1020 250,880" fill="#0d9488" opacity="0.6"/>
+    <polygon points="250,780 200,950 230,960 260,820" fill="#0d9488" opacity="0.6"/>
+  </g>
+
+  <!-- Figure 2 - Maroon silhouette from right -->
+  <g filter="url(#motionBlur)" opacity="0.4">
+    <rect x="430" y="380" width="340" height="8" fill="url(#motionMaroon)" rx="4"/>
+    <rect x="450" y="450" width="320" height="6" fill="url(#motionMaroon)" rx="3"/>
+    <rect x="410" y="530" width="370" height="8" fill="url(#motionMaroon)" rx="4"/>
+    <rect x="440" y="610" width="340" height="5" fill="url(#motionMaroon)" rx="2"/>
+    <rect x="460" y="660" width="310" height="7" fill="url(#motionMaroon)" rx="3"/>
+  </g>
+
+  <!-- Figure 2 - Maroon combatant -->
+  <g>
+    <polygon points="560,300 620,400 640,580 620,760 570,830 520,760 500,580 510,400" fill="#7f1d1d" opacity="0.7"/>
+    <polygon points="560,300 620,400 640,580 620,760 570,830 520,760 500,580 510,400" fill="none" stroke="#a52020" stroke-width="2"/>
+    <!-- Arm reaching toward impact -->
+    <polygon points="510,400 430,520 460,570 500,580 490,480" fill="#7f1d1d" opacity="0.8"/>
+    <line x1="510" y1="400" x2="430" y2="520" stroke="#a52020" stroke-width="2"/>
+    <line x1="430" y1="520" x2="460" y2="570" stroke="#a52020" stroke-width="2"/>
+    <!-- Legs -->
+    <polygon points="570,830 600,990 570,1010 530,870" fill="#7f1d1d" opacity="0.6"/>
+    <polygon points="520,760 480,940 510,950 540,800" fill="#7f1d1d" opacity="0.6"/>
+  </g>
+
+  <!-- Central impact point -->
+  <circle cx="420" cy="650" r="180" fill="url(#impactPoint)" opacity="0.5"/>
+  <circle cx="420" cy="650" r="60" fill="#ffffff" opacity="0.15" filter="url(#bigBlur)"/>
+
+  <!-- Impact shatter lines -->
+  <g stroke="#ffffff" stroke-width="2.5" opacity="0.7" filter="url(#hardGlow)">
+    <line x1="420" y1="650" x2="350" y2="560"/>
+    <line x1="420" y1="650" x2="500" y2="570"/>
+    <line x1="420" y1="650" x2="330" y2="700"/>
+    <line x1="420" y1="650" x2="510" y2="710"/>
+    <line x1="420" y1="650" x2="380" y2="560"/>
+    <line x1="420" y1="650" x2="470" y2="740"/>
+    <line x1="420" y1="650" x2="350" y2="740"/>
+    <line x1="420" y1="650" x2="490" y2="600"/>
+  </g>
+
+  <!-- Flying debris particles -->
+  <g fill="#ffffff" opacity="0.6">
+    <rect x="300" y="500" width="6" height="6" transform="rotate(30 303 503)"/>
+    <rect x="520" y="480" width="5" height="5" transform="rotate(60 522 482)"/>
+    <rect x="280" y="700" width="4" height="4" transform="rotate(15 282 702)"/>
+    <rect x="550" y="730" width="7" height="7" transform="rotate(45 553 733)"/>
+    <rect x="350" y="450" width="3" height="3" transform="rotate(70 351 451)"/>
+    <rect x="500" y="810" width="5" height="5" transform="rotate(20 502 812)"/>
+    <rect x="250" y="620" width="4" height="4" transform="rotate(55 252 622)"/>
+    <rect x="580" y="600" width="3" height="3" transform="rotate(40 581 601)"/>
+  </g>
+
+  <!-- Teal debris -->
+  <g fill="#14b8a6" opacity="0.5">
+    <polygon points="200,450 215,445 218,460 205,462"/>
+    <polygon points="180,550 192,540 200,555 188,558"/>
+    <polygon points="240,750 255,745 252,762 238,760"/>
+  </g>
+
+  <!-- Maroon debris -->
+  <g fill="#a52020" opacity="0.5">
+    <polygon points="600,440 612,430 620,448 608,452"/>
+    <polygon points="630,560 645,555 642,572 628,570"/>
+    <polygon points="580,780 595,774 592,790 578,788"/>
+  </g>
+
+  <!-- SFX text -->
+  <text x="420" y="280" text-anchor="middle" font-family="'Impact', 'Arial Black', sans-serif" font-size="100" font-weight="900" fill="#ffffff" opacity="0.12" letter-spacing="15">CLASH</text>
+
+  <!-- Dynamic panel border (broken/cracked) -->
+  <g stroke="#14b8a6" stroke-width="2" fill="none" opacity="0.5">
+    <polyline points="0,0 300,0"/>
+    <polyline points="380,0 420,30 460,0 800,0"/>
+    <polyline points="800,0 800,500"/>
+    <polyline points="800,580 780,650 800,720 800,1400"/>
+    <polyline points="800,1400 500,1400"/>
+    <polyline points="420,1400 400,1370 380,1400 0,1400"/>
+    <polyline points="0,1400 0,900"/>
+    <polyline points="0,820 20,700 0,600 0,0"/>
+  </g>
+
+  <!-- Thin cinematic bars -->
+  <rect x="0" y="0" width="800" height="50" fill="#0a0a0a" opacity="0.7"/>
+  <rect x="0" y="1350" width="800" height="50" fill="#0a0a0a" opacity="0.7"/>
+</svg>

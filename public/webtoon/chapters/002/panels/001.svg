@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" width="800" height="1200">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="50%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="tealGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="maroonStripe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7f1d1d" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#a52020"/>
+      <stop offset="100%" stop-color="#7f1d1d" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+    <clipPath id="diamondClip">
+      <polygon points="400,100 700,600 400,1100 100,600"/>
+    </clipPath>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#14b8a6" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1200" fill="url(#bg1)"/>
+
+  <!-- Subtle grid overlay -->
+  <rect width="800" height="1200" fill="url(#gridPattern)"/>
+
+  <!-- Large diagonal slashes -->
+  <g opacity="0.6">
+    <polygon points="0,0 200,0 0,400" fill="#7f1d1d"/>
+    <polygon points="800,1200 600,1200 800,800" fill="#7f1d1d"/>
+  </g>
+
+  <!-- Central diamond frame -->
+  <g clip-path="url(#diamondClip)">
+    <rect width="800" height="1200" fill="#0d9488" opacity="0.15"/>
+    <!-- Interior geometric lines -->
+    <line x1="100" y1="200" x2="700" y2="200" stroke="#14b8a6" stroke-width="1" opacity="0.4"/>
+    <line x1="100" y1="400" x2="700" y2="400" stroke="#14b8a6" stroke-width="1" opacity="0.4"/>
+    <line x1="100" y1="600" x2="700" y2="600" stroke="#14b8a6" stroke-width="1" opacity="0.4"/>
+    <line x1="100" y1="800" x2="700" y2="800" stroke="#14b8a6" stroke-width="1" opacity="0.4"/>
+    <line x1="100" y1="1000" x2="700" y2="1000" stroke="#14b8a6" stroke-width="1" opacity="0.4"/>
+    <line x1="200" y1="100" x2="200" y2="1100" stroke="#14b8a6" stroke-width="1" opacity="0.3"/>
+    <line x1="400" y1="100" x2="400" y2="1100" stroke="#14b8a6" stroke-width="1" opacity="0.3"/>
+    <line x1="600" y1="100" x2="600" y2="1100" stroke="#14b8a6" stroke-width="1" opacity="0.3"/>
+  </g>
+
+  <!-- Diamond outline -->
+  <polygon points="400,100 700,600 400,1100 100,600" fill="none" stroke="#14b8a6" stroke-width="3"/>
+  <polygon points="400,130 680,600 400,1070 120,600" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.5"/>
+
+  <!-- Horizontal maroon accent bars -->
+  <rect x="0" y="440" width="800" height="4" fill="url(#maroonStripe)"/>
+  <rect x="0" y="760" width="800" height="4" fill="url(#maroonStripe)"/>
+
+  <!-- Bold corner brackets -->
+  <g stroke="#ffffff" stroke-width="4" fill="none" opacity="0.9">
+    <polyline points="60,60 60,30 90,30"/>
+    <polyline points="740,60 740,30 710,30"/>
+    <polyline points="60,1140 60,1170 90,1170"/>
+    <polyline points="740,1140 740,1170 710,1170"/>
+  </g>
+
+  <!-- Chapter number large background text -->
+  <text x="400" y="380" text-anchor="middle" font-family="'Courier New', monospace" font-size="200" font-weight="900" fill="#14b8a6" opacity="0.08" letter-spacing="20">02</text>
+
+  <!-- Title block -->
+  <g filter="url(#glow1)">
+    <text x="400" y="520" text-anchor="middle" font-family="'Georgia', serif" font-size="22" fill="#14b8a6" letter-spacing="12" opacity="0.8">CHAPTER</text>
+  </g>
+
+  <text x="400" y="600" text-anchor="middle" font-family="'Georgia', serif" font-size="72" font-weight="bold" fill="#ffffff" letter-spacing="4">2</text>
+
+  <!-- Decorative line under number -->
+  <line x1="300" y1="630" x2="500" y2="630" stroke="#a52020" stroke-width="3"/>
+  <circle cx="300" cy="630" r="4" fill="#a52020"/>
+  <circle cx="500" cy="630" r="4" fill="#a52020"/>
+
+  <!-- Subtitle -->
+  <text x="400" y="690" text-anchor="middle" font-family="'Georgia', serif" font-size="36" font-weight="bold" fill="#ffffff" letter-spacing="6">RISING</text>
+  <text x="400" y="740" text-anchor="middle" font-family="'Georgia', serif" font-size="36" font-weight="bold" fill="#ffffff" letter-spacing="6">ACTION</text>
+
+  <!-- Small decorative elements -->
+  <g opacity="0.6">
+    <rect x="340" y="770" width="120" height="2" fill="#14b8a6"/>
+    <rect x="370" y="780" width="60" height="1" fill="#14b8a6"/>
+  </g>
+
+  <!-- Floating geometric accents -->
+  <g opacity="0.3">
+    <rect x="150" y="300" width="30" height="30" fill="none" stroke="#a52020" stroke-width="2" transform="rotate(45 165 315)"/>
+    <rect x="620" y="850" width="30" height="30" fill="none" stroke="#a52020" stroke-width="2" transform="rotate(45 635 865)"/>
+    <circle cx="650" cy="300" r="15" fill="none" stroke="#14b8a6" stroke-width="1.5"/>
+    <circle cx="150" cy="900" r="15" fill="none" stroke="#14b8a6" stroke-width="1.5"/>
+  </g>
+
+  <!-- Teal glow orb behind title area -->
+  <ellipse cx="400" cy="600" rx="200" ry="120" fill="#0d9488" opacity="0.06" filter="url(#softGlow)"/>
+
+  <!-- Bottom attribution -->
+  <text x="400" y="1150" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#14b8a6" opacity="0.4" letter-spacing="4">KITAKUN / 2026</text>
+</svg>

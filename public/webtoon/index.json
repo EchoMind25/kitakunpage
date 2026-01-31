@@ -1,0 +1,33 @@
+{
+  "webtoon": {
+    "title": "kitakun03 Webtoon",
+    "author": "kitakun03",
+    "description": "An action-fantasy webtoon following the journey of a hero navigating between worlds of light and shadow. Every choice shapes destiny.",
+    "genre": ["Action", "Fantasy"],
+    "status": "ongoing",
+    "publishedDate": "2026-02-01",
+    "updatedDate": "2026-02-08",
+    "totalChapters": 2,
+    "coverImage": "/webtoon/cover.webp",
+    "chapters": [
+      {
+        "id": 1,
+        "title": "Chapter 1: The Beginning",
+        "publishDate": "2026-02-01",
+        "panelCount": 6,
+        "thumbnail": "/webtoon/thumbnails/chapter-001.webp",
+        "status": "published"
+      },
+      {
+        "id": 2,
+        "title": "Chapter 2: Rising Action",
+        "publishDate": "2026-02-08",
+        "panelCount": 6,
+        "thumbnail": "/webtoon/thumbnails/chapter-002.webp",
+        "status": "published"
+      }
+    ]
+  },
+  "version": "2.0",
+  "lastBuildDate": "2026-01-30T10:00:00Z"
+}
